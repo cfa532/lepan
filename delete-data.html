@@ -1,2 +1,94 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="LePan: files and photo backups on your own storage. Official support, privacy and data-deletion information."><title>Delete your data · LePan</title><link rel="icon" href="assets/icon.png"><link rel="stylesheet" href="style.css"></head><body><header><a class="brand" href="./"><img src="assets/icon.png" alt="">LePan <small>乐盘</small></a><nav aria-label="Main"><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="delete-data.html">Delete data</a></nav></header><main><p class="eyebrow">Privacy controls</p><h1>Delete your data.</h1><p class="lead">LePan stores your files on the node you choose. Local device data and node data have separate controls.</p><section class="card"><h2>Request help or deletion</h2><p>Email <a href="mailto:cfa532@yahoo.com?subject=LePan%20data%20deletion%20request">cfa532@yahoo.com</a> with the subject “LePan data deletion request”. Describe whether your request concerns support correspondence, local device data, or a node identity and stored files.</p><p>Do not include passwords, private keys, identity files, invitations or personal documents. We may ask for information needed to verify a request before acting. We cannot access or erase an independently operated node; its administrator must handle deletion there.</p></section><h2>1. Stop backups</h2><p>In Settings → Auto sync, turn off photo/video and selected-folder syncing. Use Stop sync if work is active. This stops future backup activity; it does not remove existing copies.</p><h2>2. Remove node files and backups</h2><p>Delete the intended items from Files or Synced. Open the relevant Trash and permanently delete the items when you are certain. Ask the node administrator about replicas, snapshots and retention rules. Removing an item from one device or node cannot erase copies already held by independent recipients.</p><h2>3. Remove your device identity</h2><p>In Settings, choose Forget this device. This removes the saved identity and associated local app data and stops backups. It is not deletion of the node’s user identity or stored files. To revoke other devices or remove a node identity and its associated records, contact the node administrator.</p><h2>4. Clear remaining local copies</h2><p>Uninstalling LePan removes its private app-container data. Android also offers app-storage clearing controls. On iOS, use Forget this device first because Keychain credentials can survive reinstallation. Files you exported to Downloads, Pictures, Movies or another app remain until you delete them separately.</p><h2>Retention after a request</h2><p>Support records controlled by the developer can be deleted on a verified request, except where retention is necessary for legal or security obligations. Node retention is controlled by its operator. See the <a href="privacy.html">privacy policy</a> for details.</p></main><footer><p>LePan by Chao Fang · <a href="mailto:cfa532@yahoo.com">cfa532@yahoo.com</a></p><p>Storage on your own compatible Leither node. No hosted storage account is included.</p></footer></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Learn how to stop LePan backups, delete files from your node, remove device access, and request deletion of support records.">
+  <title>Delete your data · LePan</title>
+  <link rel="icon" href="assets/icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="./"><img src="assets/icon.png" alt="">LePan <small>乐盘</small></a>
+  <nav aria-label="Main"><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="delete-data.html" aria-current="page">Delete data</a></nav>
+</header>
+<main class="help-guide">
+  <p class="eyebrow">Privacy controls</p>
+  <h1>Delete your data.</h1>
+  <p class="lead">Choose what to remove from your drive, your devices, and your support records.</p>
+  <p>LePan stores files on the Leither node you choose. Files on that node, copies on your phone, and records held by support have separate deletion controls. Uninstalling the app does not delete your node’s files or user identity.</p>
+  <nav class="guide-contents" aria-label="On this page">
+    <a href="#backups">1. Stop backups</a><a href="#files">2. Delete stored files</a><a href="#devices">3. Remove device access</a><a href="#local">4. Clear local copies</a><a href="#requests">5. Request deletion</a>
+  </nav>
+  <div class="card">
+    <h2>Before you begin</h2>
+    <p>If you want to remove both your files and this device’s identity, delete the files while you still have access to the drive. Save any copies you want to keep before permanently deleting items or clearing device data.</p>
+    <p>To keep your drive and just stop using one phone, go to <a href="#devices">Remove device access</a>. To remove a user identity and its associated records from the node, go to <a href="#requests">Request deletion</a>.</p>
+  </div>
+
+  <section id="backups">
+    <h2>1. Stop automatic backups</h2>
+    <ol>
+      <li>On each device that backs up the content you want to remove, open <strong>Settings → Auto sync</strong>.</li>
+      <li>Turn off photo and video backup and the relevant folder-sync options. Remove selected folders from automatic syncing if you no longer want to copy them.</li>
+      <li>If a transfer is running, use <strong>Stop sync</strong>.</li>
+    </ol>
+    <p>Stopping backups leaves existing copies on the node. Turn off the relevant sources before deleting those copies, so a later sync does not upload the content again.</p>
+  </section>
+
+  <section id="files">
+    <h2>2. Delete files and backups from the node</h2>
+    <ol>
+      <li>Open <strong>Files</strong> for items you manage directly, or <strong>Synced</strong> for photo and folder backups.</li>
+      <li>Select the files or folders you want to remove and choose the action to move them to Trash.</li>
+      <li>Open the corresponding <strong>Files Trash</strong> or <strong>Backup Trash</strong>. Review the items before permanently deleting them. Use <strong>Restore</strong> if you moved something there by mistake.</li>
+      <li>Use <strong>Empty Trash</strong> only when you want to permanently delete all items in that Trash.</li>
+    </ol>
+    <p class="note">Items permanently deleted from Trash cannot be restored through Trash. Deleting a node copy does not delete the original on your phone or copies already downloaded by someone else.</p>
+    <p>The node operator controls any additional replicas, snapshots, and retention rules. Ask the operator whether further copies need to be removed. LePan cannot erase copies held by independent recipients.</p>
+  </section>
+
+  <section id="devices">
+    <h2>3. Remove a device’s access</h2>
+    <h3>Forget the phone you are using</h3>
+    <ol>
+      <li>Finish any file-deletion steps that require this phone’s access to the drive.</li>
+      <li>Open <strong>Settings → Forget this device</strong> and review the confirmation.</li>
+      <li>Confirm to remove the phone’s saved identity and associated local app data and stop its backups.</li>
+    </ol>
+    <p>This does not delete the user identity or files on the node. To use the phone with the drive again, pair it through an authorized device.</p>
+    <h3>Revoke access for another device</h3>
+    <p>On a device with device-management permission, open <strong>Settings → My devices</strong>, select the device, and choose <strong>Remove access</strong>. This stops its future access to the drive; it does not remotely erase copies already downloaded to it.</p>
+    <p>LePan may require you to pair a replacement phone and device manager before removing access, to prevent lockout. The <strong>Forget</strong> action for an already-revoked device only removes its entry from the device list.</p>
+  </section>
+
+  <section id="local">
+    <h2>4. Clear remaining copies on your devices</h2>
+    <h3>iPhone and iPad</h3>
+    <p>Use <strong>Forget this device</strong> before uninstalling LePan: saved identity credentials in iOS Keychain can survive reinstallation. Deleting the app removes its private app-container data. Separately delete any copies you exported to Photos, Files, or another app, including that app’s Recently Deleted area if you want them removed permanently.</p>
+    <h3>Android</h3>
+    <p>Use <strong>Forget this device</strong>, then uninstall LePan or use Android’s app-storage clearing controls to remove its local app data. Separately remove exported files from Downloads, Pictures, Movies, or other apps. Check those apps’ own Trash or deletion controls where applicable.</p>
+    <h3>Computers and browsers</h3>
+    <p>Delete files you downloaded to the computer using its file manager. Clearing browser site data removes local browser data, but does not delete node files or copies saved to your Downloads folder. Use <strong>My devices → Remove access</strong> from an authorized device to revoke the browser’s access to the drive.</p>
+  </section>
+
+  <section id="requests">
+    <h2>5. Request deletion of other records</h2>
+    <div class="card">
+      <h3>Node identity and stored data</h3>
+      <p>Contact the administrator who operates your node to request removal of a user identity, associated node records, or retained copies that you cannot delete yourself. Describe which user and data your request concerns. The app developer cannot access or erase an independently operated node on your behalf.</p>
+    </div>
+    <div class="card">
+      <h3>Support correspondence</h3>
+      <p>Contact <a href="mailto:cfa532@yahoo.com?subject=LePan%20data%20deletion%20request">support</a> to request deletion of support records held by the developer. The link opens an email with the subject “LePan data deletion request”. Describe the correspondence you want removed and the email address used to contact support.</p>
+      <p>We may ask for information needed to verify the request. Do not send passwords, private keys, identity files, invitations, or personal documents.</p>
+    </div>
+    <h3>What may remain</h3>
+    <p>Support records can be deleted after verification, except where retention is necessary for legal or security obligations. Node retention is controlled by its operator. Copies exported to other apps, downloaded by recipients, or held on independent nodes must be handled separately.</p>
+    <p>See the <a href="privacy.html">privacy policy</a> for more about data handling, or the <a href="support.html">support guide</a> for device setup and backup controls.</p>
+  </section>
+</main>
+<footer><p>LePan by Chao Fang · <a href="mailto:cfa532@yahoo.com">cfa532@yahoo.com</a></p><p>Storage on your own compatible Leither node. No hosted storage account is included.</p></footer>
+</body>
+</html>

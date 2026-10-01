@@ -1,2 +1,137 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="LePan: files and photo backups on your own storage. Official support, privacy and data-deletion information."><title>Support · LePan</title><link rel="icon" href="assets/icon.png"><link rel="stylesheet" href="style.css"></head><body><header><a class="brand" href="./"><img src="assets/icon.png" alt="">LePan <small>乐盘</small></a><nav aria-label="Main"><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="delete-data.html">Delete data</a></nav></header><main><p class="eyebrow">Help and support</p><h1>Let’s get you connected.</h1><p class="lead">For LePan help, contact <a href="mailto:cfa532@yahoo.com?subject=LePan%20support">cfa532@yahoo.com</a>.</p><p>Include your iOS or Android version, LePan app version, what happened, and the steps leading to it. Remove personal details from screenshots. Never send private keys, passwords, identity files or invitation secrets by email.</p><section class="card"><h2>Connect to your storage</h2><ol><li>Ask the administrator of your compatible Leither node for a device invitation or supported identity.</li><li>Open LePan and import the invitation or paste it into the setup screen.</li><li>Follow any device-approval steps provided by the node administrator.</li></ol><p>LePan does not include a hosted storage account. The developer cannot restore access to an independently operated node or recover a lost private identity.</p></section><h2>Photos and file backups</h2><p>Open Settings → Auto sync. Choose photo and video access or select the folders you want to copy. Automatic backup is optional. iOS background availability, Android and device battery settings may delay background jobs; open LePan or use Sync now to continue. Stopping sync keeps copies already saved.</p><h2>Node unavailable</h2><p>Check your network connection and that your node is running. Ask its administrator to check its address, connection settings and your device permission. Do not post node credentials or identity files in a public issue.</p><h2>Privacy and deletion</h2><p>Read the <a href="privacy.html">privacy policy</a> or follow the <a href="delete-data.html">data and identity deletion instructions</a>.</p></main><footer><p>LePan by Chao Fang · <a href="mailto:cfa532@yahoo.com">cfa532@yahoo.com</a></p><p>Storage on your own compatible Leither node. No hosted storage account is included.</p></footer></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Install LePan, connect your devices, organize private files, and set up photo and folder backups on your own storage.">
+  <title>Support · LePan</title>
+  <link rel="icon" href="assets/icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="./"><img src="assets/icon.png" alt="">LePan <small>乐盘</small></a>
+  <nav aria-label="Main"><a href="support.html" aria-current="page">Support</a><a href="privacy.html">Privacy</a><a href="delete-data.html">Delete data</a></nav>
+</header>
+<main class="help-guide">
+  <p class="eyebrow">Help and support</p>
+  <h1>Get started with LePan.</h1>
+  <p class="lead">Install your private drive, connect your devices, and keep your files and backups together.</p>
+  <p>LePan stores files on a compatible Leither node: a computer that you or someone you trust operates. Your phone and browser connect to that computer. LePan does not include a hosted storage account.</p>
+  <nav class="guide-contents" aria-label="On this page">
+    <a href="#install">1. Install</a><a href="#setup">2. Set up</a><a href="#devices">3. Connect devices</a><a href="#files">4. Use your drive</a><a href="#backups">5. Back up</a><a href="#help">6. Troubleshoot</a>
+  </nav>
+
+  <section id="install">
+    <h2>1. Install LePan</h2>
+    <p>You need a storage computer and the LePan app on an iPhone or Android phone. Keep the storage computer powered on and connected to the network when you want to access it or run backups.</p>
+    <p class="note">Joining someone else’s node? Ask its administrator for an invitation and the mobile app installation link. You can skip the computer installation and go straight to <a href="#setup">Set up your phone</a>.</p>
+    <div class="card">
+      <h3>Windows or macOS</h3>
+      <ol>
+        <li>Open the <a href="https://lepan.org/download/">LePan download page</a> on the computer that will store your files. Choose Windows x64, Mac with Apple silicon, or Mac with an Intel processor.</li>
+        <li>On Windows, open the setup executable and approve the Administrator prompt. On macOS, open the package; it installs <strong>LePan Setup</strong> in Applications and opens Terminal to continue setup.</li>
+        <li>Follow the prompts to install or select a Leither node. For a new node, choose the maximum storage it may use. The limit applies to the whole node and does not reserve that space in advance.</li>
+        <li>Finish setup and keep the first mobile invitation private. You will use it to connect your phone.</li>
+      </ol>
+      <p class="small">The Windows and macOS packages include their own Node.js runtime. You do not need to install Node.js separately for these packages.</p>
+    </div>
+    <details>
+      <summary>Linux and command-line installation</summary>
+      <p>Install Node.js 18 or later, then run this command on the storage computer as the normal account that runs Leither:</p>
+      <pre><code>npx --yes @inoku/lifedrive@latest</code></pre>
+      <p>Follow the storage and setup prompts. If mobile setup has not been enabled, run:</p>
+      <pre><code>npx --yes @inoku/lifedrive@latest --upgrade --household</code></pre>
+      <p>This enables users and prints the first setup invitation. Keep Leither running while completing phone setup. If several nodes are present, use the installer’s instructions to select the intended node.</p>
+    </details>
+    <h3>Install the mobile app</h3>
+    <p>Use the LePan iOS or Android release channel provided for your device. If your node administrator invited you, ask them for the appropriate app installation link. Install and open the app before importing the invitation; the invitation itself does not install LePan.</p>
+  </section>
+
+  <section id="setup">
+    <h2>2. Set up your phone</h2>
+    <h3>First user on a new node</h3>
+    <ol>
+      <li>Copy the entire setup invitation from the computer to your phone using a private transfer method. A new setup invitation expires after ten minutes.</li>
+      <li>Open LePan’s setup screen, or go to <strong>Settings → Set up users</strong>.</li>
+      <li>Enter your name and a recognizable device name. Choose <strong>Paste node identity</strong>, or <strong>Choose identity file</strong> if you saved the invitation as a file.</li>
+      <li>Wait for the connection to finish. Your phone creates its own device key and opens your personal drive. The first user becomes the node administrator.</li>
+    </ol>
+    <h3>Join an existing node</h3>
+    <p>Import the invitation from the administrator through the same setup screen. An invitation for a new person creates a separate private drive. An invitation for another device of an existing user connects to that user’s drive and requires approval from an existing device.</p>
+    <p>Allow local-network access if your phone asks for it so LePan can reach a nearby node. Photo, folder, and camera permissions are requested when you use the corresponding features.</p>
+  </section>
+
+  <section id="devices">
+    <h2>3. Connect more devices</h2>
+    <h3>Add another phone or tablet</h3>
+    <ol>
+      <li>On a paired device with device-management permission, open <strong>Settings → My devices → Pair another device</strong>.</li>
+      <li>Transfer the invitation privately to the new device. Open LePan there, enter a device name, and import it through <strong>Set up users → Choose identity file</strong>.</li>
+      <li>Compare the match code on both devices. On the existing device, open <strong>My devices</strong> and choose <strong>Approve this device</strong>. Refresh the list if the request has not appeared.</li>
+    </ol>
+    <h3>Use a web browser</h3>
+    <ol>
+      <li>On your phone, open <strong>Settings → My devices → Pair a browser</strong> and copy the browser URL it provides.</li>
+      <li>Open that address on a computer connected to the same network as the node. The page displays a QR code.</li>
+      <li>On the phone, choose <strong>Scan browser QR code</strong>, scan it, and approve the browser session.</li>
+    </ol>
+    <p>Use <strong>My devices</strong> to review or remove a device’s access. To give another person their own private drive, the administrator uses <strong>Invite another user</strong>.</p>
+  </section>
+
+  <section id="files">
+    <h2>4. Use your private drive</h2>
+    <h3>Upload and organize</h3>
+    <p>Open <strong>Files</strong> to browse your drive. Use the photo or file upload controls to choose items from your device, and <strong>New folder</strong> to organize them. Select an item or open its menu to see the available rename, move, copy, and download actions. Controls vary slightly between the phone and browser interfaces.</p>
+    <h3>Open, download, and share</h3>
+    <p>Open a file to preview supported content. Choose <strong>Download</strong> to save a copy to the current device. To send a file or folder to someone else, choose <strong>Share</strong> and review the link’s available password, expiry, and access-limit settings before sending it. Sharing a link does not give the recipient access to the rest of your drive.</p>
+    <h3>Find backups and deleted items</h3>
+    <p><strong>Synced</strong> shows copies saved by automatic photo and folder backups, organized by source device. <strong>Files</strong> holds the items you manage directly. Deleted items appear in the corresponding <strong>Files Trash</strong> or <strong>Backup Trash</strong>, where you can restore them or permanently delete them. Emptying Trash cannot be undone.</p>
+    <h3>Use Apple’s Files app</h3>
+    <p>On iOS, enable <strong>Files integration</strong> in LePan Settings to make your drive available as a location in Apple’s Files app. This lets compatible apps browse, open, and save files on the drive. It is separate from automatic backup.</p>
+  </section>
+
+  <section id="backups">
+    <h2>5. Back up photos and folders</h2>
+    <ol>
+      <li>Open <strong>Settings → Auto sync</strong> on the device whose files you want to back up.</li>
+      <li>Enable photo and video backup, folder backup, or both. Grant access to the photos you want included and use the system folder picker to select folders.</li>
+      <li>Review the available network settings, then choose <strong>Sync now</strong> to start. Keep the app open for the initial transfer if many files need to be copied.</li>
+      <li>Open <strong>Synced</strong> to review saved copies and their status. Check that the backup has completed before relying on it.</li>
+    </ol>
+    <p>Auto sync copies supported content to the node; it does not delete the originals on your phone. Only authorized photos and selected folders are included. A selected folder does not grant access to other apps’ private storage.</p>
+    <p>Background work depends on iOS or Android scheduling, battery settings, network access, and node availability. If a backup pauses, reopen LePan or use <strong>Sync now</strong>. <strong>Stop sync</strong> stops active work; turn off the relevant Auto sync options to disable future backups. Copies already saved on the node remain.</p>
+  </section>
+
+  <section id="help">
+    <h2>6. Troubleshooting and maintenance</h2>
+    <details>
+      <summary>The node is unavailable</summary>
+      <p>Check that the storage computer is awake, Leither is running, and both devices have a working network connection. Try connecting on the same local network first. Check local-network permission on the phone and ask the node administrator to review the node address, firewall, and your device access. Access from outside the home also depends on the node’s network configuration.</p>
+    </details>
+    <details>
+      <summary>An invitation expired or setup was interrupted</summary>
+      <p>If an unused invitation expired, ask the administrator to create a fresh one. If the first setup claim had already started before the connection was lost, reopen LePan on the same phone and import the same invitation again. Keep the app installed so its pending device key is preserved. For a device awaiting approval, compare its match code with the request shown on an existing device.</p>
+    </details>
+    <details>
+      <summary>Photos or folders are missing from a backup</summary>
+      <p>Check photo permissions in the phone’s settings and confirm the relevant source is enabled in Auto sync. For a folder, check that access is still granted. Make sure the node has enough available storage, reopen LePan, and choose Sync now. Review the status in Synced rather than assuming that a background transfer finished.</p>
+    </details>
+    <details>
+      <summary>A phone was lost or replaced</summary>
+      <p>Use a remaining device manager to pair a replacement and remove the lost device’s access from My devices. LePan may require a replacement phone and device manager before it allows removal, to prevent lockout. Removing access does not erase files previously downloaded to the lost device.</p>
+      <p>If every authorized device is lost, contact the node operator. There is no ordinary password-reset flow. Keeping another paired device with device-management permission helps preserve access.</p>
+    </details>
+    <details>
+      <summary>Update LePan</summary>
+      <p>Update the phone app through the same distribution channel used to install it. The node administrator can upgrade the server by running this command on the storage computer:</p>
+      <pre><code>npx --yes @inoku/lifedrive@latest --upgrade</code></pre>
+      <p>Follow the installer’s completion instructions. Upgrades preserve users, device keys, files, and backups; the installer does not restart Leither. Reload the browser client after the node update.</p>
+    </details>
+    <h3>Privacy and deletion</h3>
+    <p>Read the <a href="privacy.html">privacy policy</a> for details on data handling, or follow <a href="delete-data.html">Delete your data</a> for instructions on local device data, node files, and identity removal.</p>
+  </section>
+</main>
+<footer><p>LePan by Chao Fang · <a href="mailto:cfa532@yahoo.com">cfa532@yahoo.com</a></p><p>Storage on your own compatible Leither node. No hosted storage account is included.</p></footer>
+</body>
+</html>
